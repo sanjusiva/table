@@ -1,0 +1,9 @@
+
+<mat-dialog-content>
+    <app-cform [formValue]="formValue" [form]="form" 
+    (submitValData)="submitValDataFunc($event)"></app-cform>
+    <mat-dialog-actions>
+      <button mat-button mat-dialog-close (click)="closeDialogFunc()" ><mat-icon style="width: 200px;">Cancel</mat-icon></button>
+    </mat-dialog-actions>
+</mat-dialog-content>
+

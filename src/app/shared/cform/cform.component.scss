@@ -1,0 +1,61 @@
+::ng-deep {
+    .display-flex {
+      display: flex;
+    }
+    .flex-1 {
+      flex: 1;
+    }
+    .flex-2 {
+      flex: 2;
+    }
+    .flex-3 {
+      flex: 3;
+    }
+    .flex-4 {
+      flex: 4;
+    }
+    .flex-5 {
+      flex: 5;
+    }
+    .flex-6 {
+      flex: 6;
+    }
+    [class*="flex-"] {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    [class*="flex-"]:first-child {
+      padding-left: 0;
+    }
+    [class*="flex-"]:last-child {
+      padding-right: 0;
+    }
+  
+    // PrimeNG form grid CSS
+    .p-field {
+      display: grid;
+      margin-bottom: 1em;
+      input,
+      textarea,
+      .p-dropdown {
+        width: 100%;
+      }
+    }
+  
+    //Ng-Zorro-Antd CSS
+    .ant-form-item {
+      display: block;
+    }
+  
+    .rmBtn {
+      display: -webkit-box !important;
+    }
+  
+    // Bootstrap range
+    input[type="range"] {
+      border: none;
+      background: #d5d4d4;
+      height: 10px;
+    }
+  }
+  

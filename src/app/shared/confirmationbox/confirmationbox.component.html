@@ -1,0 +1,10 @@
+<p>confirmationbox works!</p>
+
+<mat-dialog-content>
+    <h1>{{data.content}}</h1>
+    <h3>{{data.content}} Do you want to delete id of : {{data.id}}</h3>
+    <mat-dialog-actions>
+        <button (click)="actionFunc(true)">Yes</button><br>
+        <button (click)="actionFunc(false)">No</button>
+    </mat-dialog-actions>
+</mat-dialog-content>

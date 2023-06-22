@@ -1,0 +1,523 @@
+{
+  "ELEMENT_DATA": [
+    {
+      "position": 1,
+      "name": "Hydrogen",
+      "weight": 1.0079,
+      "symbol": "H",
+      "category": "Fixed"
+    },
+    {
+      "position": 2,
+      "name": "Helium",
+      "weight": 4.0026,
+      "symbol": "He",
+      "category": "Fixed"
+    },
+    {
+      "position": 3,
+      "name": "Lithium",
+      "weight": 6.941,
+      "symbol": "Li",
+      "category": "Fixed"
+    },
+    {
+      "position": 4,
+      "name": "Beryllium",
+      "weight": 9.0122,
+      "symbol": "Be",
+      "category": "Variable"
+    }
+  ],
+  "TABLE_DATA" : [
+    {
+        "securityType": "ABCD",
+        "Description": "Random description 1",
+        "Category": "ADJ"
+    },
+    {
+        "securityType": "WXYZ",
+        "Description": "Random description 2",
+        "Category": "FIXED"
+    },
+    {
+        "securityType": "PQRS",
+        "Description": "Random description 3",
+        "Category": "ADJ"
+    },
+    {
+        "securityType": "LMNO",
+        "Description": "Random description 4",
+        "Category": "FIXED"
+    },
+    {
+        "securityType": "QRST",
+        "Description": "Random description 5",
+        "Category": "ADJ"
+    },
+    {
+        "securityType": "WXYZ",
+        "Description": "Random description 6",
+        "Category": "FIXED"
+    },
+    {
+        "securityType": "ABCD",
+        "Description": "Random description 7",
+        "Category": "ADJ"
+    },
+    {
+        "securityType": "LMNO",
+        "Description": "Random description 8",
+        "Category": "FIXED"
+    },
+    {
+        "securityType": "QRST",
+        "Description": "Random description 9",
+        "Category": "ADJ"
+    },
+    {
+        "securityType": "WXYZ",
+        "Description": "Random description 10",
+        "Category": "FIXED"
+    },
+    {
+        "securityType": "ABCD",
+        "Description": "Random description 11",
+        "Category": "ADJ"
+    },
+    {
+        "securityType": "LMNO",
+        "Description": "Random description 12",
+        "Category": "FIXED"
+    },
+    {
+        "securityType": "QRST",
+        "Description": "Random description 13",
+        "Category": "ADJ"
+    },
+    {
+        "securityType": "WXYZ",
+        "Description": "Random description 14",
+        "Category": "FIXED"
+    },
+    {
+        "securityType": "ABCD",
+        "Description": "Random description 15",
+        "Category": "ADJ"
+    },
+    {
+        "securityType": "LMNO",
+        "Description": "Random description 16",
+        "Category": "FIXED"
+    },
+    {
+        "securityType": "QRST",
+        "Description": "Random description 17",
+        "Category": "ADJ"
+    },
+    {
+        "securityType": "WXYZ",
+        "Description": "Random description 18",
+        "Category": "FIXED"
+    },
+    {
+        "securityType": "ABCD",
+        "Description": "Random description 19",
+        "Category": "ADJ"
+    },
+    {
+        "securityType": "LMNO",
+        "Description": "Random description 20",
+        "Category": "FIXED"
+    }
+],
+  "FORMLY_DATA": [
+    {
+      "fieldConfig": [
+        {
+          "fieldGroupClassName": "display-flex",
+          "fieldGroup": [
+            {
+              "key": "fname",
+              "type": "input",
+              "className": "flex-1",
+              "label": "First Name",
+              "placeholder": "First Name",
+              "validations": [
+                {
+                  "validator": "required",
+                  "value": true,
+                  "message": "FirstName is required"
+                }
+              ]
+            },
+            {
+              "key": "lname",
+              "type": "input",
+              "className": "flex-1",
+              "label": "Last Name",
+              "placeholder": "Last Name",
+              "validations": [
+                {
+                  "validator": "required",
+                  "value": true,
+                  "message": "LastName is required"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "SAMPLE_DATA": [
+    {
+      "key": "email",
+      "type": "input",
+      "props": {
+        "label": "Email address",
+        "placeholder": "Enter email",
+        "required": true
+      }
+    }
+  ],
+  "data": [
+    {
+      "key": "name",
+      "type": "input",
+      "label": "Name",
+      "className": "col-6",
+      "dependentRow": "name",
+      "required": true,
+      "validators": {
+        "pattern": {
+          "expression": "^([a-zA-Z]{3,20})$",
+          "message": "Name should contain only alphabets"
+        },
+        "required": {
+          "value": true,
+          "message": "Name filed is required"
+        }
+      }
+    },
+    {
+      "key": "lastName",
+      "type": "input",
+      "label": "Last Name",
+      "className": "col-6",
+      "dependentRow": "name",
+      "validators": {
+        "pattern": {
+          "expression": "^([a-zA-Z]{0,10})$",
+          "message": "Entered LastName is not valid"
+        },
+        "required": {
+          "value": false,
+          "message": ""
+        }
+      }
+    },
+    {
+      "key": "email",
+      "type": "input",
+      "label": "Email",
+      "propKey": "email",
+      "required": true,
+      "validators": {
+        "pattern": {
+          "expression": "^[A-Za-z0-9._/]+@+([A-Za-z]{2,4})+.+([A-Za-z]{2,4})$",
+          "message": "Entered Email is not valid"
+        },
+        "required": {
+          "value": true,
+          "message": "Email filed is required"
+        }
+      }
+    },
+    {
+      "key": "phone",
+      "type": "input",
+      "label": "Phone",
+      "required": true,
+      "validators": {
+        "pattern": {
+          "expression": "^([6-9]{1}[0-9]{9})$",
+          "message": "Entered Phone number is not valid"
+        },
+        "required": {
+          "value": true,
+          "message": "Phone filed is required"
+        }
+      }
+    },
+    {
+      "key": "address",
+      "type": "input",
+      "label": "Address",
+      "description": "Address 1",
+      "required": true,
+      "minLength": 10,
+      "validators": {
+        "pattern": {
+          "expression": "^([a-zA-Z0-9 ,/]{10,30})$",
+          "message": "Entered address is not valid"
+        },
+        "required": {
+          "value": true,
+          "message": "Address filed is required"
+        }
+      }
+    },
+    {
+      "key": "address1",
+      "type": "input",
+      "description": "Address 2",
+      "minLength": 5,
+      "validators": {
+        "pattern": {
+          "expression": "^([a-zA-Z0-9 ,/]{5,30})$",
+          "message": "Entered address is not valid"
+        },
+        "required": {
+          "value": false,
+          "message": ""
+        }
+      }
+    },
+    {
+      "key": "state",
+      "type": "input",
+      "className": "col-6",
+      "label": "State/Province",
+      "validators": {
+        "pattern": {
+          "expression": "^([a-zA-Z]{2,20})$",
+          "message": "Entered State is not valid"
+        },
+        "required": {
+          "value": false,
+          "message": ""
+        }
+      }
+    },
+    {
+      "key": "zip",
+      "type": "input",
+      "label": "Zip/Postal Code",
+      "className": "col-3",
+      "validators": {
+        "pattern": {
+          "expression": "^([0-9]{0,6})$",
+          "message": "Entered Zip code is not valid"
+        },
+        "required": {
+          "value": false,
+          "message": ""
+        }
+      }
+    },
+    {
+      "key": "country",
+      "type": "input",
+      "label": "Country",
+     
+      "validators": {
+        "pattern": {
+          "expression": "^([a-zA-Z]{2,20})$",
+          "message": "Entered Country is not valid"
+        },
+        "required": {
+          "value": false,
+          "message": ""
+        }
+      }
+    },
+    {
+      "key": "category",
+      "type": "select",
+      "label": "Category",
+      "defaultValue": 1,
+      "required": true,
+      "className": "col-3",
+      "options": [
+        {
+          "value": 1,
+          "label": "None"
+        },
+        {
+          "value": 2,
+          "label": "Fixed"
+        },
+        {
+          "value": 3,
+          "label": "Variable"
+        }
+      ],
+      "validators": {
+       
+        "required": {
+          "value": true,
+          "message": "This field is required"
+        }
+      }
+    },
+    {
+      "key": "conditions",
+      "type": "multicheckbox",
+      "label": "Terms & Conditions",
+      "description": "Please read the following and check box once finished to submit form.",
+      "options": [
+        {
+          "label": "I Accept",
+          "value": "1"
+        }
+      ],
+      "validators": {
+       
+        "required": {
+          "value": false,
+          "message": ""
+        }
+      }
+    }
+  ],
+  "fieldConfig": [
+    {
+      "fieldGroupClassName": "display-flex",
+      "fieldGroup": [
+        {
+          "key": "fname",
+          "type": "input",
+          "className": "flex-1",
+          "label": "First Name",
+          "placeholder": "First Name",
+          "validations": [
+            {
+              "validator": "required",
+              "value": true,
+              "message": "FirstName is required"
+            }
+          ]
+        },
+        {
+          "key": "lname",
+          "type": "input",
+          "className": "flex-1",
+          "label": "Last Name",
+          "placeholder": "Last Name",
+          "validations": [
+            {
+              "validator": "required",
+              "value": true,
+              "message": "LastName is required"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "fieldGroupClassName": "display-flex",
+      "fieldGroup": [
+        {
+          "key": "gender",
+          "type": "radio",
+          "className": "flex-1",
+          "label": "Gender",
+          "options": [
+            { "label": "Female", "value": "f" },
+            { "label": "Male", "value": "m" }
+          ],
+          "validations": [
+            {
+              "validator": "required",
+              "value": true,
+              "message": "Gender is required"
+            }
+          ]
+        },
+        {
+          "key": "age",
+          "type": "input",
+          "className": "flex-1",
+          "label": "Age",
+          "placeholder": "Age",
+          "validations": [
+            {
+              "validator": "required",
+              "value": true,
+              "message": "Age is required"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "email",
+      "type": "input",
+      "label": "Email",
+      "placeholder": "Email",
+      "validations": [
+        {
+          "validator": "required",
+          "value": true,
+          "message": "Email is required"
+        },
+        {
+          "validator": "pattern",
+          "value": "^[A-Za-z0-9._/]+@+([A-Za-z]{2,4})+.+([A-Za-z]{2,4})$",
+          "message": "$value is not a valid email"
+        }
+      ]
+    }
+  ],
+  "FINAL_FORMLY": [
+    {
+      "key": "securityType",
+      "type": "input",
+      "label": "SecurityTypes",
+      "placeholder": "SecurityTypes",
+      "validations": [
+        {
+          "validator": "required",
+          "value": true,
+          "message": "SecurityTypes is required"
+        },
+        {
+          "validator": "pattern",
+          "value": "^[A-Z]{4}$",
+          "message": "SecurityTypes is not valid"
+        }
+      ]
+    },
+    {
+        "key": "Description",
+        "type": "input",
+        "label": "Description",
+        "placeholder": "Description",
+        "validations": [
+          {
+            "validator": "required",
+            "value": true,
+            "message": "Description is required"
+          }
+        ]
+      },
+    {
+        "key": "Category",
+        "type": "select",
+        "label": "Category",
+        "placeholder": "Category",
+        "options": [
+          { "value": "ADJ", "label": "ADJ" },
+          { "value": "FIXED", "label": "FIXED" }
+        ],
+        "validations": [
+          {
+            "validator": "required",
+            "value": true,
+            "message": "Category is required"
+          }
+        ]
+      }
+  ]
+}
